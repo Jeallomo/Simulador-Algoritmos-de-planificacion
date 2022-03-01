@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <a href="Menu.html">Menu</a>
+        <div class="tabla-procesos">
+            <table class="tabla-proc" id="tabla-procesos">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Proceso</th>
+                        <th rowspan="2">T. LLegada Li</th>
+                        <th rowspan="2">Ejecución t</th>
+                        <th colspan="2">Bloqueo</th>          
+                    </tr>
+                    <tr>
+                        <th>Inicio</th>
+                        <th>Duración</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                        <tr>
+
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tabla_datos_generales">
+            <table class="tabla-dat-gen" id="tabla-datos-cpu">
+                <thead>
+                    <tr>
+                        <th colspan="2">Estadísticas CPU</th>
+                    </tr>
+                </thead>
+                <tbody> 
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tabla_datos_estadisticos">
+            <table class="tabla-dat-est" id="tabla-datos-procesos">
+            <thead>
+                <tr>
+                    <th>Proceso</th>
+                    <th>Ejecución t</th>
+                    <th>Espera</th>
+                    <th>Bloqueo</th>
+                    <th>Instante fin</th>
+                    <th>Retorno</th>
+                    <th>Tiempo perdido</th>
+                    <th>Penalidad</th>
+                    <th>Tiempo respuesta</th>
+                </tr>
+            </thead>
+            <tbody> 
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+        <canvas id="miCanvas" width="500" height="800"></canvas>
+        <script>
+            
+            let canvas = document.getElementById("miCanvas").getContext("2d");
+            let miChart = new Chart(canvas, {
+                type: 'bar',
+                data:   {
+                        datasets: [{
+                            barPercentage: 0.5,
+                            barThickness: 6,
+                            maxBarThickness: 8,
+                            minBarLength: 2,
+                            data: [10, 20, 30, 40, 50, 60, 70]
+                        }]
+                    },
+                options: {
+                    indexAxis: 'y',
+                }
+            });
+        </script>
+  </body>
+  <script ></script>
+  <script src = "colasPrioridad.js"></script>
+</html>

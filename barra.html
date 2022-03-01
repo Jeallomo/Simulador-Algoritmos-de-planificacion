@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+  </head>
+  <body>
+        <canvas id="miCanvas" width="500" height="400"></canvas>
+        <script>
+            //referencia al objeto
+            let canvas = document.getElementById("miCanvas").getContext("2d");
+            //conjunto de datos
+            const gEjecucion = {
+                label: 'Procesos en ejecución',
+                data: [[3, 12], 19, 3, 5, 2, 3],
+                backgroundColor:  'rgba(0, 255, 0, 0.2)',              
+                borderColor: 'rgba(0, 0, 0, 0.5)',
+                borderWidth: 1
+            };
+
+            const gBloqueo = {
+                label: 'Procesos bloqueados',
+                data: [[2, 15], 19, 3, 5, 2, 3],
+                backgroundColor:  'rgba(255, 0, 0, 0.2)',              
+                borderColor: 'rgba(0, 0, 0, 0.5)',
+                borderWidth: 1
+            };
+
+            //contenedor de la grafica
+            let miChart = new Chart(canvas, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [
+                        gEjecucion,
+                        gBloqueo,
+                    ]
+                },
+                options: {
+                    indexAxis: 'y',
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+  </body>
+
+</html>

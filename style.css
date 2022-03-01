@@ -1,0 +1,38 @@
+body{
+    background-color: #08252ecb;
+    font-family: sans-serif;
+}
+
+.tabla{
+    margin: 150px auto;
+    width: 500px;
+}
+
+table{
+
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    /*padding: 50px;*/
+}
+
+th , td {
+    border: solid 1px rgb(201, 201, 201);
+    padding: 10px;
+}
+thead {
+    background-color: rgb(189, 205, 206);
+    border-bottom: solid 3px #000;
+
+}
+
+tr:nth-child(even){
+    background-color:  #ddd;
+}
+tr:hover td{
+    background-color: #000;
+    color: white;
+}
+caption {
+    background-color: rgb(95, 106, 114);
+}

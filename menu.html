@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styleTables.css" rel="stylesheet" type="text/css"/>
+    <title>Inicio</title>
+</head>
+<body>
+    <div>
+        <table id = "tabla-ingreso">
+            <thead>
+                <tr>
+                    <th rowspan="2">T. LLegada Li</th>
+                    <th rowspan="2">Ejecución t</th>
+                    <th colspan="2">Bloqueo</th>          
+                </tr>
+                <tr>
+                    <th>Inicio</th>
+                    <th>Duración</th>
+                </tr>
+            </thead>
+            <tbody> 
+                    <tr class="contain-inputs">
+                        <td><input class="classTLlegada" type="number" name="iLlegada" min="0" max="20"></td>
+                        <td><input class="idTEjecucion" type="number" name="tEjecucion"  min="1" max="15"></td>
+                        <td><input class="idblocInicio" type="number" name="bloqInicio"  min="0" max="10"></td>
+                        <td><input class="idbloqFinal" type="number" name="bloqFinal"  min="1" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="classTLlegada" type="number" name="iLlegada" min="0" max="20"></td>
+                        <td><input class="idTEjecucion" type="number" name="tEjecucion"  min="1" max="15"></td>
+                        <td><input class="idblocInicio" type="number" name="bloqInicio" min="0" max="10"></td>
+                        <td><input class="idbloqFinal" type="number" name="bloqFinal"  min="1" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="classTLlegada" type="number" name="iLlegada" min="0" max="20"></td>
+                        <td><input class="idTEjecucion" type="number" name="tEjecucion" min="1" max="15"></td>
+                        <td><input class="idblocInicio" type="number" name="bloqInicio" min="0" max="10"></td>
+                        <td><input class="idbloqFinal" type="number" name="bloqFinal"  min="1" max="20"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="classTLlegada" type="number" name="iLlegada" min="0" max="20"></td>
+                        <td><input class="idTEjecucion" type="number" name="tEjecucion" min="1" max="15"></td>
+                        <td><input class="idblocInicio" type="number" name="bloqInicio" min="0" max="10"></td>
+                        <td><input class="idbloqFinal" type="number" name="bloqFinal"  min="1" max="20"></td>
+                    </tr>
+            </tbody>
+        </table>
+        <select name="algoritmos" id="lista-algoritmos">
+            <option value=0>FCFS</option>
+            <option value=1>SJF</option>
+            <option value=2>SRTF</option>
+        </select>
+        <input class="botones" type="submit" value="Enviar" onclick= "enviarDatos()">
+          
+    </div>
+    <script src="control.js"></script>
+</body>
+</html>
